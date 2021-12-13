@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html> 
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">						
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <ul>
+        <li><a href=index.html>Home</a></li>
+        <li><a href=about.html>About</a></li>
+        <li><a href=work.html>Work</a></li>
+        <li><a href=contact.html>Contact</a></li>
+		 <li><a href=game.html>Game</a></li>
+        <li><a href=carousel.html>Gallery</a></li>
+
+		
+      </ul>
+
+<div class="slideshow-container">
+	<h2>Gallery</h2>
+
+<div class="mySlides fade">
+  <img src="image1.jpg" alt="workspace" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="image2.jpg" alt="calendar" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="image3.jpg" alt="wireframe" style="width:100%">
+	
+</div>
+	
+<div class="mySlides fade">
+  <img src="image4.jpg" alt="nature" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="image5.jpg" alt="create" style="width:100%">
+</div>
+<div class="mySlides fade">
+  <img src="image6.jpg" alt="plant" style="width:100%">
+</div>
+	<h3 class="text1">Here are a few aesthetics that inspire me. When I came across these images I had to add them to my website. The wireframes, journals, books, plants, and laptops. These images remind me of my everyday life, they are like a breath of fresh air. They clear my mind allowing me to be more creative. It's a reminder to keep my space clean, and organized to help me be more productive. </h3>
+
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+
